@@ -26,13 +26,9 @@ Lazy Load JS is a lightweight JavaScript library for lazy loading images on web 
 
 You can include Lazy Load JS in your project by adding the following script tag to your HTML file:
 
-```html
-<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyImage.js"></script>
-Alternatively, you can install it using npm:
 
-bash
-Copy code
-npm install lazy-load-js
+<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyImage.js"></script>
+
 Usage
 Basic Usage
 Lazy Load JS can be easily integrated into your web page. Simply add the lazy-load class to the images you want to lazy load, and include the library in your script.
