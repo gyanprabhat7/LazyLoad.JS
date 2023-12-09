@@ -1,4 +1,4 @@
-
+theme: minima
 # Lazy Load JS
 
 **Version:** 1.0.0
