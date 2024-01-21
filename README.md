@@ -98,6 +98,22 @@ Lazy Load JS can be easily integrated into your web page. Simply add the lazy-lo
 </script>
 ```
 
+### Lazy Load Videos
+```bash
+<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyLoadVideo.js"></script>
+<script>
+    const lazyVideo = new LazyLoadVideo('.lazy-load-video');
+
+    // Customize the loading strategy
+    lazyVideo.observeWithIntersectionObserver();
+
+    // Optional: Provide a placeholder video
+    lazyVideo.placeholderVideo = 'placeholder.mp4';
+
+    lazyVideo.init();
+</script>
+```
+
 ## API Reference
 ### LazyImage Class
 
@@ -139,6 +155,46 @@ lazyImage.loadImage(image);
 image: The HTMLImageElement to load.
 ```
 
+### LazyVideo Class
+
+#### Constructor
+Creates a new LazyLoadVideo instance.
+
+```bash
+const lazyVideo = new LazyLoadVideo(selector);
+```
+
+selector: A CSS selector for the videos you want to lazy load.
+
+
+
+#### init()
+Initializes the lazy loading functionality based on the browser's capabilities.
+
+```bash
+lazyImage.init();
+```
+#### observeWithIntersectionObserver()
+
+Uses the Intersection Observer API to lazy load videos when they enter the viewport.
+
+```bash
+lazyVideo.observeWithIntersectionObserver();
+```
+
+#### loadVideoElementsImmediately()
+Loads all videos immediately if Intersection Observer is not supported.
+```bash
+lazyVideo.loadVideoElementsImmediately();
+```
+
+#### loadVideoElement(element)
+Loads a specific video.
+```bash
+lazyVideo.loadVideoElement(element);
+```
+element: The HTMLVideoElement to load.
+
 ## Browser Support
 Lazy Load JS is compatible with modern web browsers that support the Intersection Observer API.
 
@@ -146,3 +202,5 @@ Lazy Load JS is compatible with modern web browsers that support the Intersectio
 ## License
 
 Lazy Load JS is licensed under the [MIT License ](https://mit-license.org/)
+
+
