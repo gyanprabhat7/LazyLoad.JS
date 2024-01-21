@@ -1,9 +1,9 @@
 
 # Lazy Load JS
 
-**Version:** 1.0.0
+**Version:** 1.2.0
 
-Lazy Load JS is a lightweight JavaScript library designed to enhance web page performance by implementing lazy loading for images. Images are loaded only when they are about to become visible in the user's viewport, reducing initial page load times and saving bandwidth.
+Lazy Load JS is a lightweight JavaScript library designed to enhance web page performance by implementing lazy loading for both images and videos. Images and videos are loaded only when they are about to become visible in the user's viewport, reducing initial page load times and saving bandwidth.
 
 ## Table of Contents
 
@@ -13,12 +13,18 @@ Lazy Load JS is a lightweight JavaScript library designed to enhance web page pe
     - [Basic Usage](#basic-usage)
     - [Advanced Configuration](#advanced-configuration)
 4. [API Reference](#api-reference)
-    - [LazyImage Class](#lazyimage-class)
+    - [LazyLoadImage Class](#lazyloadimage-class)
         - [Constructor](#constructor)
         - [init()](#init)
         - [observeWithIntersectionObserver()](#observewithintersectionobserver)
-        - [loadImagesImmediately()](#loadimagesimmediately)
-        - [loadImage()](#loadimage)
+        - [loadImageElementsImmediately()](#loadimageelementsimmediately)
+        - [loadImageElement()](#loadimageelement)
+    - [LazyLoadVideo Class](#lazyloadvideo-class)
+        - [Constructor](#constructor-1)
+        - [init()](#init-1)
+        - [observeWithIntersectionObserver()](#observewithintersectionobserver-1)
+        - [loadVideoElementsImmediately()](#loadvideoelementsimmediately)
+        - [loadVideoElement()](#loadvideoelement)
 5. [Examples](#examples)
 6. [Browser Support](#browser-support)
 7. [Contributing](#contributing)
@@ -26,36 +32,61 @@ Lazy Load JS is a lightweight JavaScript library designed to enhance web page pe
 
 ## Introduction
 
-Lazy Load JS aims to simplify the implementation of lazy loading for images on websites. By deferring the loading of images until they are needed, the library contributes to a smoother user experience and faster page loads.
+Lazy Load JS aims to simplify the implementation of lazy loading for images and videos on websites. By deferring the loading of media elements until they are needed, the library contributes to a smoother user experience and faster page loads.
 
 ## Installation
 
 You can include Lazy Load JS in your project using the following script tag:
 
 ```bash
+<!--  For Images  -->
+
   <script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyImage.js"></script>
+
+<!--  For Videos  -->
+
+  <script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyVideo.js"></script>
 ```
 
 ## Getting Started
 
 ### Basic Usage
-Lazy Load JS can be easily integrated into your web page. Simply add the lazy-load class to the images you want to lazy load and include the library in your script.
+Lazy Load JS can be easily integrated into your web page. Simply add the lazy-load-image and/or lazy-load-video class to the images and videos you want to lazy load, and include the respective library in your script.
+
+#### Lazy Load Images
 
 ```bash
-<img src="placeholder.jpg" data-src="image-to-lazy-load.jpg" class="lazy-load" alt="Lazy-loaded Image">
+<img src="placeholder.jpg" data-src="image-to-lazy-load.jpg" class="lazy-load-image" alt="Lazy-loaded Image">
 
-<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyImage.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyimage.js"></script>
 <script>
-    const lazyImage = new LazyImage('.lazy-load');
+    const lazyImage = new LazyLoadImage('.lazy-load-image');
     lazyImage.init();
 </script>
 ```
-### Advanced Configuration
+
+#### Lazy Load Videos
 
 ```bash
-<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyImage.js"></script>
+<video data-src="video-to-lazy-load.mp4" class="lazy-load-video" controls>
+    Your browser does not support the video tag.
+</video>
+
+<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyvideo.js"></script>
 <script>
-    const lazyImage = new LazyImage('.lazy-load');
+    const lazyVideo = new LazyLoadVideo('.lazy-load-video');
+    lazyVideo.init();
+</script>
+
+```
+
+### Advanced Configuration
+
+#### Lazy Load Images
+```bash
+<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyimage.js"></script>
+<script>
+    const lazyImage = new LazyLoadImage('.lazy-load-image');
 
     // Customize the loading strategy
     lazyImage.observeWithIntersectionObserver();
