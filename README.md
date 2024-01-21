@@ -199,6 +199,13 @@ element: The HTMLVideoElement to load.
 Lazy Load JS is compatible with modern web browsers that support the Intersection Observer API.
 
 
+## Sponor
+
+Sponsors are welcome: [UPI ](https://www.upilinks.in/payment-link/upi301859863)
+
+please drop your github username so we can mention you correctly.
+
+
 ## License
 
 Lazy Load JS is licensed under the [MIT License ](https://mit-license.org/)
