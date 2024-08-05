@@ -1,7 +1,7 @@
 
 # Lazy Load JS
 
-**Version:** 1.2.0
+**Version:** 1.2.1
 
 Lazy Load JS is a lightweight JavaScript library designed to enhance web page performance by implementing lazy loading for both images and videos. Images and videos are loaded only when they are about to become visible in the user's viewport, reducing initial page load times and saving bandwidth.
 
