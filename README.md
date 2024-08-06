@@ -201,9 +201,10 @@ Lazy Load JS is compatible with modern web browsers that support the Intersectio
 
 ## Sponor
 
-Sponsors are welcome: [UPI ](https://upipaylinks.com/links/5b743dee436eb6c)
+Sponsors are welcome: [UPI ](https://upipaylinks.com/links/5b743dee436eb6c) 
 
 please drop your github username so we can mention you correctly.
+reach out at [gyan@epiction.co](mailto:gyan@epiction.co)
 
 
 ## License
