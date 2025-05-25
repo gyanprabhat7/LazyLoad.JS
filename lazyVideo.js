@@ -1,3 +1,23 @@
+/* NOTE: IT DO NOT WORK.
+
+The tag `video` do not have a property named
+`src` (as `img`). These tags need have one
+(or more) sub-element named `source`.
+
+<!-- wrong -->
+<video src="foo-video.mp4"></video>
+
+<!-- right -->
+<video>
+    <source src="foo-vide.mp4" type="video/mp4" />
+</video>
+
+Fonts:
+* https://www.w3schools.com/tags/tag_video.asp
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video
+
+*/
+
 class LazyLoadVideo {
     constructor(selector) {
         this.videoElements = document.querySelectorAll(selector);

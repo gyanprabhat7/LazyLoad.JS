@@ -1,7 +1,7 @@
 
 # Lazy Load JS
 
-**Version:** 1.2.1
+**Version:** 1.2.3
 
 Lazy Load JS is a lightweight JavaScript library designed to enhance web page performance by implementing lazy loading for both images and videos. Images and videos are loaded only when they are about to become visible in the user's viewport, reducing initial page load times and saving bandwidth.
 
@@ -72,7 +72,7 @@ Lazy Load JS can be easily integrated into your web page. Simply add the lazy-lo
     Your browser does not support the video tag.
 </video>
 
-<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyvideo.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gyanprabhat7/LazyLoad.JS/lazyVideo.js"></script>
 <script>
     const lazyVideo = new LazyLoadVideo('.lazy-load-video');
     lazyVideo.init();
@@ -115,13 +115,13 @@ Lazy Load JS can be easily integrated into your web page. Simply add the lazy-lo
 ```
 
 ## API Reference
-### LazyImage Class
+### LazyLoadImage Class
 
 #### Constructor
-Creates a new LazyImage instance.
+Creates a new LazyLoadImage instance.
 
 ```bash
-const lazyImage = new LazyImage(selector);
+const lazyImage = new LazyLoadImage(selector);
 ```
 
 selector: A CSS selector for the images you want to lazy load.

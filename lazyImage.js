@@ -1,14 +1,13 @@
-class LazyImage {
+class LazyLoadImage {
     constructor(selector) {
         this.images = document.querySelectorAll(selector);
     }
 
     init() {
-        if ('IntersectionObserver' in window) {
+        if ('IntersectionObserver' in window)
             this.observeWithIntersectionObserver();
-        } else {
+        else
             this.loadImagesImmediately();
-        }
     }
 
     observeWithIntersectionObserver() {
@@ -27,18 +26,14 @@ class LazyImage {
     }
 
     loadImagesImmediately() {
+        console.log('WARNING: your browser do not have support to "IntersectionObserver" (object)');
         this.images.forEach(image => this.loadImage(image));
     }
 
     loadImage(image) {
-        const src = image.getAttribute('data-src');
-        if (src) {
-            image.src = src;
-        }
+        image.src = image.dataset.src;
     }
 }
 
-// Export the class for usage in other scripts
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
     module.exports = LazyImage;
-}
